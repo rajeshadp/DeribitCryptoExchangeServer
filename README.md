@@ -34,13 +34,19 @@ This code is basically a Server (C++) Order management system which accepts subs
 Server uses websockets for long term connections and huge data transfers.
 
 Server does tasks in 3 threads, 
+
  i) main thread to listen client connections,
+
  ii) second thread to register/unregister subscriptions from client, to validate if OAuth2 token is still valid
+
 iii) thread three, does a periodic execution of api calls in batch mode (i.e. for different instruments calls made in async mode so that server thread doesnt block itself waiting for 
      response from Deribit exchange test server and response is segregated once all responses are acquired, used pplx library for this purpose which is industry proven and efficient 
      than std::async, as pplx uses inbuilt thread pool for tasks) and segregated response is then pushed to corresponding clients.
+
 API calls use json RPC mechanism version2 which is the latest used by industry for efficient/performance proven way to api transfer data
 
+Implementation details (dependencies):
+======================================
 Coding done on debian(also compatible to Ubuntu).
 Used Websocket++ library with async calling to allow max throughput for server while listening to connections. (basically depends on boost Asio libraries)
 cpprestsdk for http api calls, pplx::task (parallel pattern libraries for concurrent tasks and achieving non-blocking asyn backend calls for server to reduce latency) , also used batch processing. 
