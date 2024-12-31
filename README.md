@@ -43,7 +43,7 @@ iii) thread three, does a periodic execution of api calls in batch mode (i.e. fo
      response from Deribit exchange test server and response is segregated once all responses are acquired, used pplx library for this purpose which is industry proven and efficient 
      than std::async, as pplx uses inbuilt thread pool for tasks) and segregated response is then pushed to corresponding clients.
 
-API calls use json RPC mechanism version2 which is the latest used by industry for efficient/performance proven way to api transfer data
+API calls use json RPC mechanism version2 which is the latest used by industry. JSON-RPC is a lightweight remote procedure call (RPC) protocol based on JSON, Often used with WebSockets for real-time applications
 
 Implementation details (dependencies):
 ======================================
