@@ -26,3 +26,8 @@ Advanced Bonus:
 •⁠ ⁠Create a websocket server that clients can connect to and subscribe to a symbol by sending a message.
 •⁠ ⁠The server should respond with a stream of messages with the orderbook updates for each symbol that is
 subscribed to
+
+I did the coding on debian VM.
+Used Websocket++ (basically depends on boost Asio libraries)
+cpprestsdk for http api calls, pplx::task (parallel pattern libraries for concurrent tasks and achieving non-blocking asyn backend calls for server to reduce latency) , also used batch processing. 
+and other standard c++ features like multi-threading, etc.
