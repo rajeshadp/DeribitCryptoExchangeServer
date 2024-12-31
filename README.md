@@ -48,6 +48,9 @@ API calls use json RPC mechanism version2 which is the latest used by industry f
 Implementation details (dependencies):
 ======================================
 Coding done on debian(also compatible to Ubuntu).
+
 Used Websocket++ library with async calling to allow max throughput for server while listening to connections. (basically depends on boost Asio libraries)
+
 cpprestsdk for http api calls, pplx::task (parallel pattern libraries for concurrent tasks and achieving non-blocking asyn backend calls for server to reduce latency) , also used batch processing. 
+
 and other standard c++ features like multi-threading, etc.
