@@ -29,7 +29,7 @@ subscribed to
 
 Brief technical code flow:
 ==========================
-This code is basically a Server (C++) Order management system which accepts subscriptions from clients for certain Deribit exchange test server instruments from various clients, then periodically information of these instruments is fetched from Deribit test server using its apis which need OAuth2 authentication for each api call, which is a time bound token authorization mechanism, which also provides refresh tokens to save redundency. Data fetched from Deribit crypto test server is then segregated and pushed to clients as per their subscribed instruments. 
+This code is basically an Order management system Server (C++) which accepts subscriptions from clients for certain Deribit exchange test server instruments from various clients, then periodically information of these instruments is fetched from Deribit test server using its apis which need OAuth2 authentication for each api call, which is a time bound token authorization mechanism, which also provides refresh tokens to save redundency. Data fetched from Deribit crypto test server is then segregated and pushed to clients as per their subscribed instruments. 
 
 Server uses websockets for long term connections and huge data transfers.
 
